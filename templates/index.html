@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nireesha | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #faf7ff;
+    color: #2e1065;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+header h2 {
+    color: #7c3aed;
+    transition: 0.3s;
+}
+
+header h2:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #5b21b6;
+    font-weight: 500;
+    position: relative;
+}
+
+/* underline hover */
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #7c3aed;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    padding: 100px 60px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ede9fe, #faf7ff);
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero span {
+    color: #7c3aed;
+}
+
+.hero h3 {
+    margin-top: 10px;
+    color: #6d28d9;
+}
+
+.hero p {
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.8;
+    color: #4c1d95;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: none;
+    margin: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #7c3aed;
+    color: white;
+}
+
+.primary:hover {
+    background: #6d28d9;
+    transform: translateY(-3px) scale(1.05);
+}
+
+.secondary {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.secondary:hover {
+    background: #ddd6fe;
+    transform: scale(1.05);
+}
+
+/* SECTION */
+.section {
+    padding: 70px 60px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #7c3aed;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 15px auto;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(124,58,237,0.1);
+    border: 1px solid #ede9fe;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(124,58,237,0.2);
+}
+
+/* SKILLS */
+.skill {
+    margin-bottom: 15px;
+}
+
+.bar {
+    background: #ede9fe;
+    border-radius: 10px;
+}
+
+.fill {
+    height: 8px;
+    background: #7c3aed;
+    transition: width 1s;
+}
+
+/* NEW SECTION */
+.highlight {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ede9fe;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Nireesha</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#extra">About My Journey</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Hi, I'm <span>Nireesha</span></h1>
+    <h3>Computer Science Student | GATE Aspirant</h3>
+
+    <p>
+        Passionate about problem solving, Data Structures, and building strong fundamentals 
+        for software development and competitive exams.
+    </p>
+
+    <div class="buttons">
+        <a href="#projects"><button class="btn primary">View Projects</button></a>
+        <a href="https://github.com/butchanireeshaa" target="_blank">
+            <button class="btn secondary">GitHub</button>
+        </a>
+        <a href="https://linkedin.com/in/nireeshabutcha" target="_blank">
+            <button class="btn secondary">LinkedIn</button>
+        </a>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        I am a Computer Science student focused on mastering core subjects, DSA, and preparing for GATE with consistency.
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+
+        <div class="skill">Java
+            <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill">Data Structures
+            <div class="bar"><div class="fill" style="width:75%"></div></div>
+        </div>
+
+        <div class="skill">Algorithms
+            <div class="bar"><div class="fill" style="width:70%"></div></div>
+        </div>
+
+        <div class="skill">Python
+            <div class="bar"><div class="fill" style="width:65%"></div></div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>GATE Practice Tracker</h3>
+        <p>Track daily preparation and performance.</p>
+        <br>
+        <button class="btn primary">View Project</button>
+    </div>
+
+    <div class="card">
+        <h3>DSA Problem Solver</h3>
+        <p>Optimized solutions for coding problems.</p>
+        <br>
+        <button class="btn primary">View Project</button>
+    </div>
+
+</section>
+
+<section class="section" id="extra">
+    <h2>What I Know About Me</h2>
+    <div class="card highlight">
+        I am a consistent learner who is currently focused on cracking GATE and strengthening my fundamentals in Computer Science.  
+        I believe in daily improvement, solving problems regularly, and building a strong base in Data Structures and Algorithms.  
+        I am disciplined, motivated, and committed to becoming a skilled software engineer.
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        Email: butchanirresha50@gmail.com <br>
+        Phone: +91 9876543210 <br>
+        GitHub: github.com/butchanireeshaa <br>
+        LinkedIn: linkedin.com/in/nireeshabutcha
+    </div>
+</section>
+
+<footer>
+    © 2026 Nireesha | Portfolio
+</footer>
+
+</body>
+</html>
