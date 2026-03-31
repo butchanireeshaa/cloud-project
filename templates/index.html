@@ -1,313 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Nireesha | Portfolio</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #faf7ff;
-    color: #2e1065;
-}
-
-/* NAVBAR */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-}
-
-header h2 {
-    color: #7c3aed;
-    transition: 0.3s;
-}
-
-header h2:hover {
-    transform: scale(1.1);
-}
-
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #5b21b6;
-    font-weight: 500;
-    position: relative;
-}
-
-/* underline hover */
-nav a::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #7c3aed;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* HERO */
-.hero {
-    padding: 100px 60px;
-    text-align: center;
-    background: linear-gradient(to bottom, #ede9fe, #faf7ff);
-}
-
-.hero h1 {
-    font-size: 42px;
-}
-
-.hero span {
-    color: #7c3aed;
-}
-
-.hero h3 {
-    margin-top: 10px;
-    color: #6d28d9;
-}
-
-.hero p {
-    margin: 20px auto;
-    max-width: 600px;
-    line-height: 1.8;
-    color: #4c1d95;
-}
-
-/* BUTTONS */
-.buttons {
-    margin-top: 30px;
-}
-
-.btn {
-    padding: 12px 22px;
-    border-radius: 25px;
-    border: none;
-    margin: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.primary {
-    background: #7c3aed;
-    color: white;
-}
-
-.primary:hover {
-    background: #6d28d9;
-    transform: translateY(-3px) scale(1.05);
-}
-
-.secondary {
-    background: #ede9fe;
-    color: #6d28d9;
-}
-
-.secondary:hover {
-    background: #ddd6fe;
-    transform: scale(1.05);
-}
-
-/* SECTION */
-.section {
-    padding: 70px 60px;
-}
-
-.section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #7c3aed;
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin: 15px auto;
-    max-width: 800px;
-    box-shadow: 0 10px 25px rgba(124,58,237,0.1);
-    border: 1px solid #ede9fe;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(124,58,237,0.2);
-}
-
-/* SKILLS */
-.skill {
-    margin-bottom: 15px;
-}
-
-.bar {
-    background: #ede9fe;
-    border-radius: 10px;
-}
-
-.fill {
-    height: 8px;
-    background: #7c3aed;
-    transition: width 1s;
-}
-
-/* NEW SECTION */
-.highlight {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #ede9fe;
-    margin-top: 40px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .section {
-        padding: 40px 20px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandhu's | Premium Lifestyle Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .cart-sidebar {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+<body class="bg-white text-gray-900">
 
-<body>
-
-<header>
-    <h2>Nireesha</h2>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#extra">About My Journey</a>
-        <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="glass-header sticky top-0 z-40 w-full border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-8">
+                    <a href="#" class="text-2xl font-extrabold tracking-tighter text-black uppercase">NANDHU'S</a>
+                    <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                        <a href="#new" class="hover:text-black transition">New Arrivals</a>
+                        <a href="#featured" class="hover:text-black transition">Best Sellers</a>
+                        <a href="#collections" class="hover:text-black transition">Collections</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5">
+                    <button class="p-2 hover:bg-gray-100 rounded-full transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                    <button onclick="toggleCart()" class="relative p-2 hover:bg-gray-100 rounded-full transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        <span id="cart-count" class="absolute top-1 right-1 bg-black text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </nav>
-</header>
 
-<section class="hero">
-    <h1>Hi, I'm <span>Nireesha</span></h1>
-    <h3>Computer Science Student | GATE Aspirant</h3>
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" onclick="toggleCart()" class="fixed inset-0 bg-black/40 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+    <aside id="cart-sidebar" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white z-[60] shadow-2xl cart-sidebar translate-x-full flex flex-col">
+        <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+            <h2 class="text-xl font-bold">Your Bag</h2>
+            <button onclick="toggleCart()" class="p-2 hover:bg-gray-100 rounded-full transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-grow overflow-y-auto p-6 space-y-6">
+            <div class="text-center py-10 text-gray-400">
+                <p>Your shopping bag is empty.</p>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <div class="flex justify-between mb-4">
+                <span class="text-gray-600">Subtotal</span>
+                <span id="cart-total" class="font-bold text-xl">$0.00</span>
+            </div>
+            <button class="w-full bg-black text-white py-4 rounded-xl font-bold hover:bg-gray-800 transition active:scale-95">
+                Proceed to Checkout
+            </button>
+        </div>
+    </aside>
 
-    <p>
-        Passionate about problem solving, Data Structures, and building strong fundamentals 
-        for software development and competitive exams.
-    </p>
+    <!-- Hero Section -->
+    <header class="relative bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <span class="inline-block px-4 py-1 rounded-full bg-black text-white text-xs font-bold tracking-widest uppercase mb-6">Established 2026</span>
+                <h1 class="text-6xl lg:text-8xl font-black tracking-tighter leading-none mb-8">
+                    Nandhu's <br><span class="text-gray-400">Signature.</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-10 max-w-md">
+                    Curated with care, designed for the bold. Experience the premium selection at Nandhu's where quality meets modern lifestyle.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#featured" class="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition shadow-xl shadow-gray-200">Shop Now</a>
+                    <a href="#" class="px-8 py-4 rounded-full font-bold border border-gray-200 hover:bg-white transition">The Lookbook</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800" alt="Nandhu's Collection" class="relative rounded-3xl shadow-2xl z-10 w-full object-cover aspect-square">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 border border-gray-50 hidden sm:block">
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Exclusive</p>
+                    <p class="text-lg font-bold">Midnight Chrono</p>
+                    <p class="text-black font-medium mt-2">$249.00</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="buttons">
-        <a href="#projects"><button class="btn primary">View Projects</button></a>
-        <a href="https://github.com/butchanireeshaa" target="_blank">
-            <button class="btn secondary">GitHub</button>
-        </a>
-        <a href="https://linkedin.com/in/nireeshabutcha" target="_blank">
-            <button class="btn secondary">LinkedIn</button>
-        </a>
-    </div>
-</section>
-
-<section class="section" id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        I am a Computer Science student focused on mastering core subjects, DSA, and preparing for GATE with consistency.
-    </div>
-</section>
-
-<section class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="card">
-
-        <div class="skill">Java
-            <div class="bar"><div class="fill" style="width:80%"></div></div>
+    <!-- Product Grid -->
+    <section id="featured" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-black tracking-tight">Handpicked Classics</h2>
+                <p class="text-gray-500 mt-2">Quality that speaks for itself.</p>
+            </div>
+            <a href="#" class="text-sm font-bold border-b-2 border-black pb-1 hover:text-gray-600 transition">Browse All</a>
         </div>
 
-        <div class="skill">Data Structures
-            <div class="bar"><div class="fill" style="width:75%"></div></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card group cursor-pointer">
+                <div class="relative bg-gray-100 rounded-2xl overflow-hidden aspect-[4/5] mb-4">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600" class="product-image w-full h-full object-cover transition duration-700" alt="Audio">
+                    <button onclick="addToCart('Sonic Pro Max', 320.00)" class="absolute bottom-4 left-4 right-4 bg-white py-3 rounded-xl font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-black hover:text-white">
+                        Add to Bag
+                    </button>
+                </div>
+                <h3 class="font-bold text-gray-900">Sonic Pro Max</h3>
+                <p class="text-gray-500 text-sm mb-2">High Fidelity / Slate</p>
+                <p class="font-bold text-lg">$320.00</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card group cursor-pointer">
+                <div class="relative bg-gray-100 rounded-2xl overflow-hidden aspect-[4/5] mb-4">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600" class="product-image w-full h-full object-cover transition duration-700" alt="Footwear">
+                    <button onclick="addToCart('Aero Runner V2', 155.00)" class="absolute bottom-4 left-4 right-4 bg-white py-3 rounded-xl font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-black hover:text-white">
+                        Add to Bag
+                    </button>
+                </div>
+                <h3 class="font-bold text-gray-900">Aero Runner V2</h3>
+                <p class="text-gray-500 text-sm mb-2">Performance / Crimson</p>
+                <p class="font-bold text-lg">$155.00</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card group cursor-pointer">
+                <div class="relative bg-gray-100 rounded-2xl overflow-hidden aspect-[4/5] mb-4">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=600" class="product-image w-full h-full object-cover transition duration-700" alt="Tech">
+                    <button onclick="addToCart('Nandhu\'s Smart Hub', 199.00)" class="absolute bottom-4 left-4 right-4 bg-white py-3 rounded-xl font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-black hover:text-white">
+                        Add to Bag
+                    </button>
+                </div>
+                <h3 class="font-bold text-gray-900">Nandhu's Smart Hub</h3>
+                <p class="text-gray-500 text-sm mb-2">Connect / Charcoal</p>
+                <p class="font-bold text-lg">$199.00</p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card group cursor-pointer">
+                <div class="relative bg-gray-100 rounded-2xl overflow-hidden aspect-[4/5] mb-4">
+                    <img src="https://images.unsplash.com/photo-1585333127302-d29221833948?auto=format&fit=crop&q=80&w=600" class="product-image w-full h-full object-cover transition duration-700" alt="Accessory">
+                    <button onclick="addToCart('Urban Utility Pack', 95.00)" class="absolute bottom-4 left-4 right-4 bg-white py-3 rounded-xl font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:bg-black hover:text-white">
+                        Add to Bag
+                    </button>
+                </div>
+                <h3 class="font-bold text-gray-900">Urban Utility Pack</h3>
+                <p class="text-gray-500 text-sm mb-2">Weatherproof / Black</p>
+                <p class="font-bold text-lg">$95.00</p>
+            </div>
         </div>
+    </section>
 
-        <div class="skill">Algorithms
-            <div class="bar"><div class="fill" style="width:70%"></div></div>
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-2">
+                <h2 class="text-3xl font-black tracking-tighter mb-6 uppercase">NANDHU'S</h2>
+                <p class="text-gray-400 max-w-sm mb-8 leading-relaxed">
+                    Setting the new standard in digital commerce. Quality products, seamless service, and a community built around style.
+                </p>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition cursor-pointer">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Collections</h4>
+                <ul class="text-gray-400 space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-white transition">New Arrivals</a></li>
+                    <li><a href="#" class="hover:text-white transition">Best Sellers</a></li>
+                    <li><a href="#" class="hover:text-white transition">Limited Edition</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Company</h4>
+                <ul class="text-gray-400 space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Our Story</a></li>
+                    <li><a href="#" class="hover:text-white transition">Sustainability</a></li>
+                    <li><a href="#" class="hover:text-white transition">Shipping Policy</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="skill">Python
-            <div class="bar"><div class="fill" style="width:65%"></div></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 border-t border-gray-900 text-center text-gray-500 text-xs">
+            &copy; 2026 NANDHU'S Studio. All rights reserved.
         </div>
+    </footer>
 
-    </div>
-</section>
+    <script>
+        let cart = [];
 
-<section class="section" id="projects">
-    <h2>Projects</h2>
+        function toggleCart() {
+            const sidebar = document.getElementById('cart-sidebar');
+            const overlay = document.getElementById('cart-overlay');
+            const isOpen = !sidebar.classList.contains('translate-x-full');
 
-    <div class="card">
-        <h3>GATE Practice Tracker</h3>
-        <p>Track daily preparation and performance.</p>
-        <br>
-        <button class="btn primary">View Project</button>
-    </div>
+            if (isOpen) {
+                sidebar.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+                overlay.classList.remove('opacity-100');
+            } else {
+                sidebar.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            }
+        }
 
-    <div class="card">
-        <h3>DSA Problem Solver</h3>
-        <p>Optimized solutions for coding problems.</p>
-        <br>
-        <button class="btn primary">View Project</button>
-    </div>
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartUI();
+            
+            // Auto open cart
+            const sidebar = document.getElementById('cart-sidebar');
+            if (sidebar.classList.contains('translate-x-full')) {
+                toggleCart();
+            }
+        }
 
-</section>
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCartUI();
+        }
 
-<section class="section" id="extra">
-    <h2>What I Know About Me</h2>
-    <div class="card highlight">
-        I am a consistent learner who is currently focused on cracking GATE and strengthening my fundamentals in Computer Science.  
-        I believe in daily improvement, solving problems regularly, and building a strong base in Data Structures and Algorithms.  
-        I am disciplined, motivated, and committed to becoming a skilled software engineer.
-    </div>
-</section>
+        function updateCartUI() {
+            const container = document.getElementById('cart-items');
+            const countLabel = document.getElementById('cart-count');
+            const totalLabel = document.getElementById('cart-total');
+            
+            if (cart.length === 0) {
+                container.innerHTML = `<div class="text-center py-10 text-gray-400"><p>Your shopping bag is empty.</p></div>`;
+                countLabel.innerText = "0";
+                totalLabel.innerText = "$0.00";
+                return;
+            }
 
-<section class="section" id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-        Email: butchanirresha50@gmail.com <br>
-        Phone: +91 9876543210 <br>
-        GitHub: github.com/butchanireeshaa <br>
-        LinkedIn: linkedin.com/in/nireeshabutcha
-    </div>
-</section>
+            let total = 0;
+            let count = 0;
+            
+            container.innerHTML = cart.map(item => {
+                total += item.price * item.quantity;
+                count += item.quantity;
+                return `
+                    <div class="flex justify-between items-center bg-gray-50 p-4 rounded-xl">
+                        <div class="flex gap-4">
+                            <div>
+                                <h4 class="font-bold text-sm">${item.name}</h4>
+                                <p class="text-xs text-gray-500">Quantity: ${item.quantity}</p>
+                                <p class="text-sm font-black mt-1">$${(item.price * item.quantity).toFixed(2)}</p>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart('${item.name}')" class="text-gray-400 hover:text-red-500 transition">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-4v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                        </button>
+                    </div>
+                `;
+            }).join('');
 
-<footer>
-    © 2026 Nireesha | Portfolio
-</footer>
-
+            countLabel.innerText = count;
+            totalLabel.innerText = `$${total.toFixed(2)}`;
+        }
+    </script>
 </body>
 </html>
